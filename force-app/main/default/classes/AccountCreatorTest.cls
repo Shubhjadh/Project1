@@ -26,7 +26,8 @@ public class AccountCreatorTest
                                                    WHERE AccountId = :testAccount.Id];
 
         // Assert changes
-        for (Opportunity opp : updatedOpportunities) {
+        for (Opportunity opp : updatedOpportunities) 
+        {
             if (opp.Probability >= 70) {
                 System.assertEquals('Prospecting', opp.StageName, 'Opportunity stage should be updated to "Prospecting".');
             } else {
